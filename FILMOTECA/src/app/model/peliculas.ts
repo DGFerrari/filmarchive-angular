@@ -36,4 +36,64 @@ export class Peliculas {
     this.img_grid = img_grid;
   }
   
+  //===== GETTERS =====\\
+  // ID de la pelicula
+  getId(): number {
+    return this.id;
+  }
+
+  // Titulo de la pelicula
+  getTitulo(): string {
+    return this.titulo;
+  }
+
+  // Director de la pelicula
+  getDirector(): string {
+    return this.director;
+  }
+
+  // Año de la pelicula
+  getAño(): number {
+    return this.año;
+  }
+
+  // Tiempo de la pelicula en minutos
+  getTiempoMinutos(): number {
+    return this.tiempo;
+  }
+
+  // Tiempo de la pelicula en formato 'horas:minutos'
+  getTiempo(): string {
+    let n = this.tiempo;
+    let horas = Math.floor(n / 60);
+    let minutos = n % 60;
+    return `${horas}:${minutos}`;
+  }
+
+  // Genero de la pelicula
+  getGenero(): string {
+    return this.genero;
+  }
+
+  // Valoracion de la pelicula
+  getValoracion(): number {
+    return this.valoracion;
+  }
+
+  // Disponibilidad de la pelicula
+  getDisponible(): boolean {
+    return this.disponible;
+  }
+
+  // Imagen de la pelicula en formato hero
+  getImgHero(): string {
+    return this.img_hero;
+  }
+  // Imagen de la pelicula en formato grid
+  getImgGrid(): string {
+    return this.img_grid;
+  }
+
+
+
 }
