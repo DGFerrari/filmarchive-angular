@@ -1,0 +1,8 @@
+<h1>CATALOGO PELICULAS</h1>
+
+<!-- For de peliculas-->
+@for (ListaPelicula of ListaPeliculas; track ListaPeliculas) {
+
+    <app-p-tarjeta [pelis]="ListaPelicula" [numLista]="$index"></app-p-tarjeta>
+
+}
