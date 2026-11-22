@@ -1,6 +1,6 @@
 import { Peliculas } from '../model/peliculas';
 
-export const PELICULAS_DATA: Peliculas[] = [
+export const PELICULAS_DATA: Array<Peliculas> = [
     {
       id: 1,
       titulo: 'Iron Man',
@@ -181,4 +181,4 @@ export const PELICULAS_DATA: Peliculas[] = [
       img_hero: '',
       img_grid: '',
     },
-  ];
+];
