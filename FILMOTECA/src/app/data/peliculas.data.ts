@@ -1,6 +1,6 @@
 import { Peliculas } from '../model/peliculas';
 
-export const  ListaPeliculas: Peliculas[] = [
+export const PELICULAS_DATA: Peliculas[] = [
     {
       id: 1,
       titulo: 'Iron Man',
