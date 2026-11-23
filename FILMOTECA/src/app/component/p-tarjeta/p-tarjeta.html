@@ -1,4 +1,4 @@
-<div class="tarjeta">
+<div [class]="pelis.getDisponible() ? 't-disponible' : 't-no-disponible'">
     <div>
         <p class="num-tarjeta">{{numLista + 1}}</p>
         <img [src]="pelis.getImgGrid()" class="img-tarjeta">
@@ -8,7 +8,7 @@
         <h2>{{pelis.getDirector()}}</h2>
         <p>{{pelis.getAno()}}</p>
         <p>{{pelis.getTiempo()}}</p>
-        <p>⭐{{pelis.getValoracion()}}</p>
+        <p class="estrellas" [style.--valoracion]="pelis.getValoracion()">⭐{{pelis.getValoracion()}}</p>
     
         @if (pelis.getDisponible()) {
             <p>Disponible</p>
