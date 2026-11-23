@@ -82,6 +82,4 @@ export class Peliculas {
     return this.img_grid;
   }
 
-
-
 }

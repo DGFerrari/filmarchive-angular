@@ -1,8 +1,13 @@
-<h1>CATALOGO PELICULAS</h1>
+<div class="titulo_seccion">
+    <h2>CATALOGO PELICULAS</h2>
+    <h3>Peliculas: {{ ListaPeliculas.length }}</h3>
+    <h3>Disponibles: {{ getTotalDisponibles(ListaPeliculas) }}</h3>
+    <h3>Tiempo: {{ getTotalHoras(ListaPeliculas)}}</h3>
+</div>
 
-<!-- For de peliculas-->
-@for (ListaPelicula of ListaPeliculas; track ListaPeliculas) {
-
-    <app-p-tarjeta [pelis]="ListaPelicula" [numLista]="$index"></app-p-tarjeta>
-
-}
+<div class="lista_pelis">
+    <!-- For de peliculas-->
+    @for (ListaPelicula of ListaPeliculas; track ListaPeliculas) {
+        <app-p-tarjeta [pelis]="ListaPelicula" [numLista]="$index"></app-p-tarjeta>
+    }
+</div>
