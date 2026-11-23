@@ -10,6 +10,7 @@
     color: wheat;
 }
 
+/* Estilo de tarjeta No Disponible */
 .t-no-disponible {
     filter: grayscale(100);
     display: flex;
@@ -44,17 +45,12 @@
     color: white;
 }
 
-.t-no-disponible .num-tarjeta- {
-    border-color: rgb(158, 158, 158);
-    background-color: rgb(102, 102, 102);   
-}
-
 /* Info Tarjeta */
 .info-tarjeta {
     margin-left: 20px;
 }
 
-/*  */
+/* Estrella Tarjeta */
 .estrellas {
     background-color: rgb(15, 0, 80);
     color: white;
