@@ -55,7 +55,7 @@ export class Peliculas {
     let n = this.tiempo;
     let horas = Math.floor(n / 60);
     let minutos = n % 60;
-    return `${horas}:${minutos}`;
+    return `${horas}h ${minutos}m`;
   }
 
   // Genero de la pelicula

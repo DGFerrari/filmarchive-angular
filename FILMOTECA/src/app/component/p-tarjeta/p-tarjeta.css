@@ -1,4 +1,37 @@
+/* Estilo de tarjeta */
 .tarjeta {
-    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    border-radius: 5px;
     border-style: solid;
+    border-color: rgb(156, 1, 1);
+    background-color: rgb(102, 0, 0);
+    color: wheat
+}
+
+/* Imagen Grid Pelicula*/
+.img-tarjeta {
+    height: 300px;
+    width: 200px;
+    margin-bottom: -4px;
+}
+
+/* Numerito Tarjeta */
+.num-tarjeta {
+    position: absolute;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(156, 1, 1);
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: -2px;
+    margin-left: -2px;
+    background-color: rgb(102, 0, 0);
+    color: white;
+}
+
+.info-tarjeta {
+    margin-left: 20px;
 }

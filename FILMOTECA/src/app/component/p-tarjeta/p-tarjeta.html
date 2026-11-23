@@ -1,8 +1,19 @@
 <div class="tarjeta">
-    <p>{{numLista + 1}}</p>
-    <h1>{{pelis.getTitulo()}}</h1>
-    <h2>{{pelis.getDirector()}}</h2>
-    <p>{{pelis.getAno()}}</p>
-    <p>{{pelis.getTiempo()}}</p>
-    <p>{{pelis.getValoracion()}}</p>
+    <div>
+        <p class="num-tarjeta">{{numLista + 1}}</p>
+        <img [src]="pelis.getImgGrid()" class="img-tarjeta">
+    </div>
+    <div class="info-tarjeta">
+        <h1>{{pelis.getTitulo()}}</h1>
+        <h2>{{pelis.getDirector()}}</h2>
+        <p>{{pelis.getAno()}}</p>
+        <p>{{pelis.getTiempo()}}</p>
+        <p>⭐{{pelis.getValoracion()}}</p>
+    
+        @if (pelis.getDisponible()) {
+            <p>Disponible</p>
+        } @else {
+            <p>Alquilada</p>
+        }
+    </div>
 </div>
