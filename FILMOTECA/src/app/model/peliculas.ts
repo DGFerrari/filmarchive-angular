@@ -8,10 +8,10 @@ export class Peliculas {
   genero: string  = "";
   valoracion: number = 0;
   disponible: boolean = false;
-  img_hero: string  = "";
-  img_grid: string  = "";
+  img_hero?: string  = "";
+  img_grid?: string  = "";
 
-  constructor(id: number,titulo: string, director: string, año: number, tiempo: number, genero: string, valoracion: number, disponible: boolean, img_hero: string, img_grid: string) {
+  constructor(id: number,titulo: string, director: string, año: number, tiempo: number, genero: string, valoracion: number, disponible: boolean, img_hero: string = "", img_grid: string = "") {
     this.id = id;
     this.titulo = titulo;
     this.director = director;
@@ -75,11 +75,24 @@ export class Peliculas {
 
   // Imagen de la pelicula en formato hero
   getImgHero(): string {
-    return this.img_hero;
+    return this.img_hero!;
   }
   // Imagen de la pelicula en formato grid
   getImgGrid(): string {
-    return this.img_grid;
+    return this.img_grid!;
   }
 
+  // Mira si tiene valoracion de 8.5, 8 o menos
+  // 1 === 10.0 - 8.5
+  // 2 === 8.4 - 8.0
+  // 3 === 7.9 - 0.0
+  getPopularidad(): number {
+    if (this.valoracion >= 8.5) {
+      return 1;
+    } else if(this.valoracion >= 8) {
+      return 2;
+    } else {
+      return 3;      
+    }
+  }
 }

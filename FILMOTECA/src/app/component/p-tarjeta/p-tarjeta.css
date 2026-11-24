@@ -14,15 +14,6 @@
 /* Estilo de tarjeta No Disponible */
 .t-no-disponible {
     filter: grayscale(100);
-    display: flex;
-    flex-direction: row;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: rgb(156, 1, 1);
-    background-color: rgb(102, 0, 0);
-    color: wheat;
-    width: 500px;
-    height: 300px;
 }
 
 /* Imagen Grid Pelicula */
@@ -37,14 +28,23 @@
     position: absolute;
     border-radius: 5px;
     border-style: solid;
-    border-color: rgb(156, 1, 1);
     padding: 10px;
     padding-left: 12px;
     padding-right: 12px;
     margin-top: -2px;
     margin-left: -2px;
-    background-color: rgb(102, 0, 0);
     color: white;
+    border-color: rgb(156, 1, 1);
+}
+
+.popu-1 {
+    background-color: rgb(0, 102, 0);
+}
+.popu-2 {
+    background-color: rgb(102, 102, 0);
+}
+.popu-3 {
+    background-color: rgb(102, 0, 0);
 }
 
 /* Info Tarjeta */

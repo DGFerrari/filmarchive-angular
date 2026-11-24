@@ -22,8 +22,6 @@ export const PELICULAS_DATA: Peliculas[] = [
     'Acción / Ciencia ficción',
     7.1,
     true,
-    'https://image.tmdb.org/t/p/original/xfBnQ4mgf1jYZsscJGJjr6ce0Ar.jpg',
-    'https://image.tmdb.org/t/p/w500/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg',
   ),
   new Peliculas(
     3,
@@ -69,9 +67,7 @@ export const PELICULAS_DATA: Peliculas[] = [
     134,
     'Acción / Ciencia ficción',
     5.6,
-    false,
-    'https://image.tmdb.org/t/p/original/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg',
-    'https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg',
+    false 
   ),
   new Peliculas(
     7,
@@ -141,9 +137,7 @@ export const PELICULAS_DATA: Peliculas[] = [
     156,
     'Acción / Fantasía',
     5.0,
-    true,
-    'https://image.tmdb.org/t/p/original/cWo36NYT1Lcl1UXu4JeX6vOeACr.jpg',
-    'https://image.tmdb.org/t/p/w500/lFByFSLV5WDJEv3KabbdAF959F2.jpg',
+    true
   ),
   new Peliculas(
     14,
@@ -153,8 +147,6 @@ export const PELICULAS_DATA: Peliculas[] = [
     104,
     'Acción / Terror',
     4.2,
-    true,
-    'https://image.tmdb.org/t/p/original/jMo0zGOGiYJZhDjQe87fNmgI0pP.jpg',
-    'https://image.tmdb.org/t/p/w500/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg',
+    true
   )
 ];

@@ -1,7 +1,19 @@
-<div [class]="pelis.getDisponible() ? 't-disponible' : 't-no-disponible'">
+<div [class]="pelis.getDisponible() ? 't-disponible' : 't-disponible t-no-disponible'">
     <div>
-        <p class="num-tarjeta">{{numLista + 1}}</p>
-        <img [src]="pelis.getImgGrid()" class="img-tarjeta">
+        
+        <p class="num-tarjeta" [class]="(
+            pelis.getPopularidad() == 1 ? 'popu-1' : 
+            pelis.getPopularidad() == 2 ? 'popu-2' : 'popu-3'
+        )">{{numLista + 1}}</p>
+
+        <!-- Comprueba si hay imagen o no para usar un placeholder -->
+        @if (pelis.getImgGrid()) {
+            <img [src]="pelis.getImgGrid()" [alt]="pelis.getTitulo()" class="img-tarjeta">
+        } @else {
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxfY8q97zznCU_8ORUrmfxj3F79Jt35M8hlUqGFL6W79ELjA040rk_7o&s=10" [alt]="pelis.getTitulo()" class="img-tarjeta">
+        }
+        
+    
     </div>
     <div class="info-tarjeta">
         <h1>{{pelis.getTitulo()}}</h1>

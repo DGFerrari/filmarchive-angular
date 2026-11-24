@@ -29,7 +29,7 @@ export class Catalogo {
     for (let i = 0; i < Peliculas.length; i++) {
       t = Peliculas[i].getTiempoMinutos() + t;
     }
-    
+    // Convierte en formato H y M
     let horas = Math.floor(t / 60);
     let minutos = t % 60;
     return `${horas}h ${minutos}m`;
