@@ -1,3 +1,9 @@
+ <button class="alquilar" [disabled]="!pelis.getDisponible()">ALQUILAR</button>
+
+        @if (!pelis.getDisponible()) {
+             <button class="devolver" (click)="devolver(pelis)">DEVOLVER</button>
+        }
+
 <div [class]="pelis.getDisponible() ? 't-disponible' : 't-disponible t-no-disponible'">
     <div>
         
@@ -10,9 +16,8 @@
         @if (pelis.getImgGrid()) {
             <img [src]="pelis.getImgGrid()" [alt]="pelis.getTitulo()" class="img-tarjeta">
         } @else {
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxfY8q97zznCU_8ORUrmfxj3F79Jt35M8hlUqGFL6W79ELjA040rk_7o&s=10" [alt]="pelis.getTitulo()" class="img-tarjeta">
+            <img src="https://www.meme-arsenal.com/memes/f0817b058fc1b32bdbda2ca842b61888.jpg" [alt]="pelis.getTitulo()" class="img-tarjeta">
         }
-        
     
     </div>
     <div class="info-tarjeta">

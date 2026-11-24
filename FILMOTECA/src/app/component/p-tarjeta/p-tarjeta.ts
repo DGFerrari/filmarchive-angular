@@ -12,4 +12,12 @@ export class PTarjeta {
  @Input() pelis! : Peliculas;
  @Input() numLista! : number;
 
+ alquilar(p : Peliculas) {
+  p.setDisponible(true);
+ }
+
+ devolver(p : Peliculas) {
+  p.setDisponible(false);
+ }
+
 }

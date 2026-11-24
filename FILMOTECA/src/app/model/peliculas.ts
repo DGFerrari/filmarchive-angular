@@ -95,4 +95,12 @@ export class Peliculas {
       return 3;      
     }
   }
+
+  //=====SETTERS=====\\
+  // Cambiar estado
+  setDisponible(b : boolean) {
+    this.disponible = b;
+  }
+
+  
 }
