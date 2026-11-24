@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, computed, signal  } from '@angular/core';
 import { Peliculas } from '../../model/peliculas';
 import { PELICULAS_DATA } from '../../data/peliculas.data'
 import { PTarjeta } from '../p-tarjeta/p-tarjeta';
@@ -35,4 +35,15 @@ export class Catalogo {
     return `${horas}h ${minutos}m`;
   }
 
+ busqueda = signal('');
+
+  // Se recalcula sola cuando cambia busqueda()
+  peliculasFiltradas = computed(() => {
+    const texto = this.busqueda().trim().toLowerCase();
+    if (!texto) return this.ListaPeliculas;
+
+    return this.ListaPeliculas.filter(p =>
+      p.getTitulo().toLowerCase().includes(texto) 
+    );
+  });
 }
