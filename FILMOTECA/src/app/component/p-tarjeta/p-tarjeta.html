@@ -1,4 +1,4 @@
- <button class="alquilar" [disabled]="!pelis.getDisponible()">ALQUILAR</button>
+ <button class="alquilar" [disabled]="!pelis.getDisponible()" (click)="alquilar(pelis)">ALQUILAR</button>
 
         @if (!pelis.getDisponible()) {
              <button class="devolver" (click)="devolver(pelis)">DEVOLVER</button>

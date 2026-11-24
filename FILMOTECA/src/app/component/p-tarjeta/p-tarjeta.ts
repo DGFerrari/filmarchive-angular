@@ -13,11 +13,11 @@ export class PTarjeta {
  @Input() numLista! : number;
 
  alquilar(p : Peliculas) {
-  p.setDisponible(true);
+  p.setDisponible(false);
  }
 
  devolver(p : Peliculas) {
-  p.setDisponible(false);
+  p.setDisponible(true);
  }
 
 }
